@@ -42,6 +42,7 @@ def print_movies(films)
       puts '*' * 20
       puts ''
       puts 'Title: ' + film["title"]
+      puts 'Director: ' + film["director"]
     end
   end
 puts '*' * 20
