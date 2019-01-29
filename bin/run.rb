@@ -8,5 +8,10 @@ welcome
 
 while true
   character = get_character_from_user
+  if character == "exit"
+    puts "\nFor Nothing... Goodbye!"
+    break
+  end
+  puts "Searching....."
   show_character_movies(character)
 end
