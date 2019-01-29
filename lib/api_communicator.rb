@@ -26,24 +26,6 @@ end
   # iterate over the response hash to find the collection of `films` for the given
 
   #   `character`
-
-  films = []
-  response_hash["results"].each do |character|
-    if character["name"] == character_name
-      films = character["films"]
-    end
-  end
-
-  film_arr = []
-
-  films.each do |film|
-    film_response_string = RestClient.get(film)
-    film_response_hash = JSON.parse(film_response_string)
-    film_arr << film_response_hash
-  end
-
-  film_arr
-
   # collect those film API urls, make a web request to each URL to get the info
   #  for that film
 
