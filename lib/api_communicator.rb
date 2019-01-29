@@ -11,7 +11,7 @@ def get_character_movies_from_api
 end
 
 def get_film_array(response_hash, character)
-  films_array = []
+films_array = []
   response_hash["results"].each do |character_data|
     if character_data["name"].downcase == character
       character_data["films"].each do |api|
@@ -40,6 +40,7 @@ end
 
 
 def print_movies(films)
+
   if films.empty?
     puts "No films found for this character :( "
   else
